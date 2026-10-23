@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de incidencia</title>
+</head>
+
+<body>
+    <style>
+        textarea {width: 100%; height: 100px;}
+    </style>
+
+    <form method="get" action="incidencia.html">
+        <fieldset>
+            <legend>Datos del usuario</legend>
+            <div>
+                <input id="user" type="text" name="user" placeholder="Nombre y apellidos">
+                <label for="user">Usuario</label>
+            </div>
+            <div>
+                <input id="alumno" type="radio" name="type_persona" value="alumno" checked>
+                <label for="alumno">Alumno</label>
+            </div>
+            <div>
+                <input id="teacher" type="radio" name="type_persona" value="profesor">
+                <label for="teacher">Profesor</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dónde se produce</legend>
+            <div>
+                <input id="place-department" type="radio" name="place" value="place_department" checked>
+                <label for="place-department">Todo el departamento</label>
+            </div>
+            <div>
+                <input id="place-classroom" type="radio" name="place" value="place_classroom">
+                <label for="place-classroom">Todo el aula</label>
+            </div>
+            <div>
+                <input id="place-equipment" type="radio" name="place" value="place_equipment">
+                <label for="place-equipment">Sólo en un equipo</label>
+            </div>
+            <div>
+                <label for="place-detail">Identifica el dpt, aula o equipo</label>
+                <input id="place-detail" type="text" name="place_detail">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Información sobre la incidencia</legend>
+
+            <div>
+                <label for="description">Descripción sobre la incidencia</label>
+                <textarea id="description" name="description" placeholder="Describe el problema con detalle"></textarea>
+            </div>
+            <div>
+                <label>Nivel de urgencia</label>
+                <div>
+                    <input id="level-high" type="radio" value="high" name="level" checked>
+                    <label for="level-high">Alto</label>
+                </div>
+                <div>
+                    <input id="level-medium" type="radio" value="medium" name="level">
+                    <label for="level-medium">Medio</label>
+                </div>
+                <div>
+                    <input id="level-low" type="radio" value="low" name="level">
+                    <label for="level-low">Bajo</label>
+                </div>
+                <label for="by-email">Me gustaría ser avisado por email cuando se resuelva la incidencia</label>
+                <input id="by-email" type="checkbox" name="by_email" value="true">
+            </div>
+        </fieldset>
+
+        <div>
+            <button type="submit">Entrar</button>
+            <button type="reset">Limpiar</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
