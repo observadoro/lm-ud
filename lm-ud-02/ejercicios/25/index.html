@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Reserva de habitación</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form action="/reserva.html" method="get">
+            <fieldset>
+                <legend>Datos del solicitante</legend>
+                <div>
+                    <label for="name">Nombre del solicitante de la reserva</label>
+                    <input id="name" name="name" type="text" autofocus required maxlength="100">
+                </div>
+
+                <div>
+                    <label for="name">Teléfono de contacto</label>
+                    <input id="name" name="phone" placeholder="9 números" type="text" pattern="[6789][0-9]{8}" required>
+                </div>
+                <label for="file">DNI(Seleccione un archivo de imagen)</label>
+                <input id="label" name="file" type="file" accept="image/*, .pdf" multiple required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos de la reserva</legend>
+
+                <div>
+                    <label for="rooms">Habitación:</label>
+                    <select id="rooms" name="room" required>
+                        <option value="blue" selected>Azul</option>
+                        <option value="green">Verde</option>
+                        <option value="yellow">Amarilla</option>
+                        <option value="purple">Morada</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="jobs">Ocupación:</label>
+                    <select id="jobs" name="job" required>
+                        <option value="single">Individual</option>
+                        <option value="double" selected>Doble</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="provinces">Provincia:</label>
+                    <select id="provinces" name="province" required>
+                        <option value="" disabled></option>
+                        <option value="la-coruna">La Coruña</option>
+                        <option value="lugo">Lugo</option>
+                        <option value="orense">Orense</option>
+                        <option value="pontevedra">Pontevedra</option>
+                        <option value="vizcaya">Vizcaya</option>
+                        <option value="guipuzcoa">Guipúzcoa</option>
+                        <option value="alava">Álava</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <button type="submit">Entrar</button>
+            <button type="reset">Limpiar</button>
+        </form>
+    </body>
+</html>
