@@ -6,21 +6,83 @@
     <title>Ejercicio 25</title>
 </head>
 <body>
-    <form>
+    <form method="get" action="form.html">
         <fieldset>
             <legend>Para datos personales</legend>
-            <label>Teléfono</label>
-            <input type="text" placeholder="9 números" pattern="[6789][0-9]{8}">
-            <label>Correo electrónico</label>
-            <input type="email" placeholder="El formato correcto es nombre+@+servidor de correo">
+            <div>
+                <label for="phone">Teléfono</label>
+                <input id="phone" type="text" name="phone" placeholder="9 números" pattern="[6789][0-9]{8}">
+            </div>
+            <div>
+                <label for="email">Correo electrónico</label>
+                <input id="email" type="email" name="email" placeholder="El formato correcto es nombre+@+servidor de correo">
+            </div>
         </fieldset>
 
         <fieldset>
             <legend>Para valores numéricos</legend>
-            <label>Número de personas</label>
-            <input type="number">
-            <label>Mueva la barra para indicar puntuación (Del 1 al 10)</label>
+            <div>
+                <label for="numpeople" >Número de personas</label>
+                <input id="numpeople" type="number" name="number">
+            </div>
+           <div>
+                <label for="range">Mueva la barra para indicar puntuación (Del 1 al 10)</label>
+                <input id="range" name="range" type="range" min="1" max="10">
+           </div>
         </fieldset>
+
+        <fieldset>
+            <legend>Url y búsqueda</legend>
+            <div>
+                <label for="url">Url de tu sitio</label>
+                <input id="url" name="website" type="text">
+            </div>
+            <div>
+                <label for="comment">¿Qué te interesa buscar?</label>
+                <input id="comment" name="comment" type="text">
+            </div>
+        </fieldset>
+
+        <fielset>
+            <legend>Otros tipos</legend>
+            <div>
+                <label for="color">Color</label>
+                <input id="color" name="color" type="color">
+            </div>
+        </fielset>
+
+        <fieldset>
+            <legend>Para fechas</legend>
+            <div>
+                <label>Seleccione un día (Hasta fin de año):</label>
+                <input name="date" type="date">
+            </div>
+            <div>
+                <label>Sleecione una hora:</label>
+                <input name="time" type="time">
+            </div>
+            <div>
+                <label>Seleccione un mes (Hasta junio del 2020):</label>
+                <input type="month">
+            </div>
+            <div>
+                <label>Seleccione una semana (Hasta junio del 2020):</label>
+                <input type="week">
+            </div>
+            <div>
+                <label>Seleccione fecha y hora:</label>
+                <input type="datetime">
+            </div>
+        </fieldset>
+
+        <button type="submit">
+            <img width="40" height="40" src="icon-check.png"></img>
+            <p>Validar</p>
+        </button>
+        <button type="submit">
+            <img width="40" height="40" src="icon-clean.png"></img>
+            <p>Limpiar</p>
+        </button>
     </form>
 </body>
 </html>
