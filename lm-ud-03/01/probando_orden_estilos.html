@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orden estilos</title>
+    <link href="css/estilos.css" rel="stylesheet">
+    <style>
+        li {
+            color: green;
+        }
+        /* li:nth-child(odd) {
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+    <h1>Orden de preferencia de aplicación de los estilos</h1>
+    <p>En este documento, vamos a comprobar paso a paso cómo es el orden de preferencia de aplicación de los estilos</p>
+    <ol>
+        <li style="color: red;">Estilos del Navegador</li>
+        <li>Estilos definidos en un documento de estilos externo</li>
+        <li style="color: red;">Estilos definidos con la etiqueta &lt;style&gt;</li>
+        <li>Estilos definidos con el atributo style</li>
+    </ol>
+</body>
+</html>
