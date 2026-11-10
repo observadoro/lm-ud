@@ -1,0 +1,51 @@
+* {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.box {
+    border: 1px solid #000;
+}
+
+.green {
+    color: green;
+    text-decoration: underline;
+}
+
+p:nth-of-type(1) {
+    color: red;
+    text-align: center;
+
+    em {
+        color: darkblue;
+        background-color: #FBF7DB;
+    }
+}
+
+p:nth-of-type(2),
+p:nth-of-type(3) {
+    color: #333;
+}
+
+.negative {
+    color: yellow;
+    background-color: #000;
+}
+
+p:nth-of-type(3) {
+    text-align: center;
+}
+
+.text {
+    color: #000;
+    text-decoration: underline;
+}
+
+span + span {
+    color: skyblue;
+}
